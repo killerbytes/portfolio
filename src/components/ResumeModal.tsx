@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { Download, Copy, Check, FileText, Terminal } from "lucide-react";
+import { resolveAssetUrl } from "@/utils/projectLoader";
 
 interface ResumeModalProps {
   isOpen: boolean;
@@ -32,7 +33,7 @@ export const ResumeModal: React.FC<ResumeModalProps> = ({
 
   const handleCopyText = async () => {
     try {
-      const response = await fetch("/resume.txt");
+      const response = await fetch(resolveAssetUrl("/resume.txt"));
       const text = await response.text();
       await navigator.clipboard.writeText(text);
       setCopied(true);
@@ -79,7 +80,7 @@ export const ResumeModal: React.FC<ResumeModalProps> = ({
             </button>
 
             <a
-              href="/resume.pdf"
+              href={resolveAssetUrl("/resume.pdf")}
               download="Joel_Carlos_Resume.pdf"
               className="flex items-center gap-1.5 px-3.5 py-1.5 font-mono text-xs font-bold text-white bg-theme-accent hover:bg-theme-accent-hover transition-colors shadow-sm"
             >

@@ -10,6 +10,8 @@ describe('ResumeModal component', () => {
     expect(screen.getAllByText(/JOEL R. CARLOS/i).length).toBeGreaterThan(0);
     expect(screen.getAllByText(/SENIOR FRONTEND DEVELOPER/i).length).toBeGreaterThan(0);
     expect(screen.getByText(/DOWNLOAD/i)).toBeInTheDocument();
+    const downloadLink = screen.getByRole('link', { name: /DOWNLOAD/i });
+    expect(downloadLink).toHaveAttribute('href', expect.stringContaining('resume.pdf'));
   });
 
   it('triggers onClose when close button is clicked', () => {

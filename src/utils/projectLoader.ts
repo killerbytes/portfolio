@@ -7,6 +7,29 @@ export function formatProjectSlug(text: string): string {
     .replace(/(^-|-$)+/g, '');
 }
 
+export function resolveAssetUrl(path: string): string {
+  if (!path) return '';
+  if (path.startsWith('http://') || path.startsWith('https://')) return path;
+
+  const baseUrl = import.meta.env.BASE_URL || '/';
+  let cleanPath = path;
+
+  const baseFolder = baseUrl.replace(/^\/|\/$/g, '');
+  if (baseFolder) {
+    if (cleanPath.startsWith(`/${baseFolder}/`)) {
+      cleanPath = cleanPath.substring(baseFolder.length + 1);
+    } else if (cleanPath.startsWith(`${baseFolder}/`)) {
+      cleanPath = cleanPath.substring(baseFolder.length);
+    }
+  }
+
+  if (cleanPath.startsWith('/')) {
+    cleanPath = cleanPath.substring(1);
+  }
+
+  return baseUrl.endsWith('/') ? `${baseUrl}${cleanPath}` : `${baseUrl}/${cleanPath}`;
+}
+
 export function parseFrontmatter(rawMarkdown: string): ProjectCaseStudy {
   const frontmatterRegex = /^---\s*[\r\n]+([\s\S]*?)[\r\n]+---\s*[\r\n]+([\s\S]*)$/;
   const match = rawMarkdown.match(frontmatterRegex);
@@ -74,6 +97,13 @@ export function parseFrontmatter(rawMarkdown: string): ProjectCaseStudy {
 
   if (!metadata.id && metadata.title) {
     metadata.id = formatProjectSlug(metadata.title);
+  }
+
+  if (metadata.thumbnail) {
+    metadata.thumbnail = resolveAssetUrl(metadata.thumbnail);
+  }
+  if (metadata.screenshots && Array.isArray(metadata.screenshots)) {
+    metadata.screenshots = metadata.screenshots.map(resolveAssetUrl);
   }
 
   return {

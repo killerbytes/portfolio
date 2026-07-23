@@ -1,7 +1,12 @@
 import { describe, it, expect } from 'vitest';
-import { parseFrontmatter, formatProjectSlug } from '../projectLoader';
+import { parseFrontmatter, formatProjectSlug, resolveAssetUrl } from '../projectLoader';
 
 describe('projectLoader utility', () => {
+  it('should resolve asset URLs cleanly with base URL', () => {
+    expect(resolveAssetUrl('https://external.com/img.png')).toBe('https://external.com/img.png');
+    expect(resolveAssetUrl('/screenshots/test.png')).toContain('screenshots/test.png');
+  });
+
   it('should format sluggified project IDs cleanly', () => {
     expect(formatProjectSlug('Inventory Management System')).toBe('inventory-management-system');
     expect(formatProjectSlug('SpotiTracks: Playlist Manager')).toBe('spotitracks-playlist-manager');
