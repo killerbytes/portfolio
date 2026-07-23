@@ -1,0 +1,124 @@
+@import "tailwindcss";
+
+:root {
+  /* Technical Editorial Light Theme (Inspired by reference design) */
+  --color-bg-page: #eaeaea;
+  --color-bg-card: #f4f4f6;
+  --color-bg-card-hover: #e4e4e7;
+  --color-bg-glass: rgba(234, 234, 234, 0.85);
+
+  --color-text-primary: #09090b;
+  --color-text-secondary: #52525b;
+  --color-text-muted: #71717a;
+
+  --color-border: #d4d4d8;
+
+  /* Tech Orange Accent */
+  --color-accent-primary: #ea580c;
+  --color-accent-hover: #c2410c;
+  --color-accent-light: rgba(234, 88, 12, 0.08);
+  --color-accent-border: rgba(234, 88, 12, 0.35);
+}
+
+html.dark {
+  /* Technical Editorial Dark Theme */
+  --color-bg-page: #09090b;
+  --color-bg-card: #121215;
+  --color-bg-card-hover: #18181c;
+  --color-bg-glass: rgba(9, 9, 11, 0.85);
+
+  --color-text-primary: #f4f4f6;
+  --color-text-secondary: #a1a1aa;
+  --color-text-muted: #71717a;
+
+  --color-border: #27272a;
+
+  /* Tech Orange Accent Dark */
+  --color-accent-primary: #f97316;
+  --color-accent-hover: #ea580c;
+  --color-accent-light: rgba(249, 115, 22, 0.12);
+  --color-accent-border: rgba(249, 115, 22, 0.4);
+}
+
+@theme {
+  --color-theme-page: var(--color-bg-page);
+  --color-theme-card: var(--color-bg-card);
+  --color-theme-card-hover: var(--color-bg-card-hover);
+  --color-theme-glass: var(--color-bg-glass);
+  --color-theme-primary: var(--color-text-primary);
+  --color-theme-secondary: var(--color-text-secondary);
+  --color-theme-muted: var(--color-text-muted);
+  --color-theme-border: var(--color-border);
+  --color-theme-accent: var(--color-accent-primary);
+  --color-theme-accent-hover: var(--color-accent-hover);
+  --color-theme-accent-light: var(--color-accent-light);
+  --color-theme-accent-border: var(--color-accent-border);
+
+  --font-sans:
+    "Inter", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    sans-serif;
+  --font-display: "Space Grotesk", "Inter", system-ui, sans-serif;
+  --font-mono: "Space Grotesk", monospace;
+}
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    background-color: var(--color-bg-page);
+    color: var(--color-text-primary);
+    transition:
+      background-color 0.2s ease,
+      color 0.2s ease;
+    font-family: "Inter", system-ui, sans-serif;
+  }
+
+  h1,
+  h2,
+  h3,
+  .font-display {
+    font-family: "Space Grotesk", "Inter", system-ui, sans-serif;
+  }
+}
+
+/* Technical Corner Brackets Card Utility */
+.tech-card {
+  position: relative;
+  background-color: var(--color-bg-card);
+  border: 1px solid var(--color-border);
+  transition: all 0.2s ease;
+}
+
+.tech-card::before,
+.tech-card::after {
+  content: "";
+  position: absolute;
+  width: 24px;
+  height: 24px;
+}
+
+.tech-card::before {
+  top: -2px;
+  left: -2px;
+  border-top: 2px solid var(--color-accent-primary);
+  border-left: 2px solid var(--color-accent-primary);
+}
+
+.tech-card::after {
+  bottom: -2px;
+  right: -2px;
+  border-bottom: 2px solid var(--color-accent-primary);
+  border-right: 2px solid var(--color-accent-primary);
+}
+
+#projects,
+#contact {
+  background: var(--color-accent-primary);
+  .text-theme-accent {
+    color: var(--color-theme-page);
+  }
+  .text-theme-muted {
+    color: var(--color-theme-primary);
+  }
+}

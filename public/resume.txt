@@ -1,0 +1,72 @@
+JOEL R. CARLOS 
+Cabanatuan City, Nueva Ecija, Philippines 
+Phone: +63 918 400 0368 
+Email: joelcarlos02@gmail.com 
+Linkedin: https://www.linkedin.com/in/joel-carlos 
+
+SENIOR FRONTEND DEVELOPER
+Senior Frontend Developer with 10+ years of solid experience building scalable, high-performance web 
+applications with a strong focus on ReactJS, component-driven architecture, and design systems. 
+Proven track record delivering enterprise-grade platforms, replacing legacy systems, and building 
+reusable UI frameworks used across multiple products. 
+Highly experienced in modern JavaScript (ES6+), ReactJS, TypeScript, Tailwind CSS, and frontend 
+performance optimization. Known for clean architecture, accessibility-aware components, mentoring 
+developers, and collaborating closely with designers, backend engineers, and stakeholders. 
+
+TECHNICAL SKILLS
+Frontend: ReactJS, TypeScript, JavaScript (ES6+), HTML5, CSS3, Tailwind CSS, Material UI, ShadCN, Bootstrap 
+State Management: Redux, MobX, Zustand 
+Frameworks / Platforms: Next.js, Node.js 
+Styling & UI: Design Systems, Component Libraries, Styled Components, Responsive Design, Cross-Browser Compatibility 
+Tooling: ESLint, Prettier, Vite, REST APIs, Figma, Canva, Adobe XD, AI 
+Other: Performance Optimization, Accessibility (a11y), Agile / Scrum, Code Reviews, Mentorship 
+Backend / Other Exposure: Ruby on Rails, Java, .NET, Python, SQL, API, WordPress, Automation, Scripting 
+
+EXPERIENCE
+Senior Frontend Developer 
+Dentsu Myco Services, Inc. | July 2022 – Present 
+● Developed and maintained React-based component libraries and design system components integrated with Drupal, improving UI consistency and developer productivity 
+● Built reusable, accessible UI components used across multiple enterprise web packages 
+● Optimized frontend performance, scalability, and maintainability for production applications 
+● Collaborated closely with designers, backend engineers, and stakeholders across multiple teams 
+● Participated in code reviews, release cycles, and architectural discussions with senior developers and team leads 
+Current Project: jp.iqos.com 
+Tech Stack: ReactJS, Drupal, C#, REST APIs, Tailwind CSS, JavaScript (ES6+), HTML5, CSS3 
+
+Senior Frontend Developer 
+Peplink (Hong Kong) | May 2018 – June 2022 
+● Led frontend development for 10+ internal and external production applications using React and Next.js 
+● Designed and built reusable component libraries and shared frontend utilities, improving development speed and cross-team consistency 
+● Architected and delivered enterprise platforms including community systems, e-commerce applications, logistics tools, CRM replacements, and ticketing systems 
+● Developed a custom WYSIWYG editor with advanced rich-text functionality for a large-scale community platform 
+● Replaced Salesforce with a custom-built enterprise solution, leading frontend architecture and implementation 
+● Built responsive dashboards and management portals using React and Material UI 
+● Mentored 4 junior frontend developers, improving onboarding efficiency, code quality, and adherence to React best practices 
+● Partnered closely with UX designers and backend engineers to ensure technical feasibility, pixel-perfect UI, and scalable architecture 
+● Optimized applications for performance, scalability, maintainability, and long-term product growth 
+
+Frontend Developer 
+Recruit.net (Hong Kong) | March 2017 – 2018 
+● Refactored and modernized legacy frontend codebases 
+● Improved responsiveness, performance, and maintainability of a large-scale job search platform 
+
+Frontend Developer 
+Brydge Pte Ltd (Singapore) | March 2016 – December 2016 
+● Solely responsible for frontend development of a professional social networking platform 
+● Delivered a fully responsive UI using EmberJS 
+
+Frontend Developer 
+Favorite Medium (Singapore) | October 2011 – March 2016 
+● Developed responsive, production-ready web applications using AngularJS, JavaScript, HTML5, CSS3, SCSS, jQuery, Rails, and NodeJS 
+● Converted complex PSD designs into pixel-perfect, cross-browser compatible interfaces following modern web standards and best practices 
+● Built CMS-driven websites compiled via Node/Grunt workflows into static HTML deployments suitable for AWS and database-free hosting environments 
+● Implemented highly responsive and interactive UI components using AngularJS and various JavaScript frameworks 
+● Contributed to both frontend and backend development across multiple enterprise and client-facing projects 
+● Developed hybrid mobile applications using AngularJS and PhoneGap for Android and iOS platforms 
+● Built internal enterprise tools including time tracking and project management systems 
+● Prototyped marketing and campaign management tools for large-scale social media platforms 
+● Delivered UI theming, redesigns, and feature enhancements for media, education, and enterprise platforms 
+
+EDUCATION
+B.S. Computer Science 
+AMA Computer University | 1996 – 2002
