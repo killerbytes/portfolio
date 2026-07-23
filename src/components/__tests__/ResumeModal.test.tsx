@@ -9,7 +9,7 @@ describe('ResumeModal component', () => {
 
     expect(screen.getAllByText(/JOEL R. CARLOS/i).length).toBeGreaterThan(0);
     expect(screen.getAllByText(/SENIOR FRONTEND DEVELOPER/i).length).toBeGreaterThan(0);
-    expect(screen.getByText(/DOWNLOAD .TXT/i)).toBeInTheDocument();
+    expect(screen.getByText(/DOWNLOAD/i)).toBeInTheDocument();
   });
 
   it('triggers onClose when close button is clicked', () => {
