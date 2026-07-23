@@ -1,14 +1,5 @@
 import React, { useEffect, useState } from "react";
-import {
-  Download,
-  Copy,
-  Check,
-  FileText,
-  Briefcase,
-  GraduationCap,
-  Award,
-  Terminal,
-} from "lucide-react";
+import { Download, Copy, Check, FileText, Terminal } from "lucide-react";
 
 interface ResumeModalProps {
   isOpen: boolean;

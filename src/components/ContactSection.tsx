@@ -1,17 +1,8 @@
 import React, { useState } from "react";
-import {
-  Mail,
-  Linkedin,
-  Copy,
-  Check,
-  Send,
-  MapPin,
-  Terminal,
-} from "lucide-react";
+import { Mail, Linkedin, Copy, Check, Send, Terminal } from "lucide-react";
 
 export const ContactSection: React.FC = () => {
   const [copied, setCopied] = useState(false);
-  const [messageSent, setMessageSent] = useState(false);
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -25,17 +16,6 @@ export const ContactSection: React.FC = () => {
     setCopied(true);
     setTimeout(() => setCopied(false), 2000);
   };
-
-  // const handleSubmit = (e: React.FormEvent) => {
-  //   e.preventDefault();
-  //   if (formData.name && formData.email && formData.message) {
-  //     setMessageSent(true);
-  //     setTimeout(() => {
-  //       setMessageSent(false);
-  //       setFormData({ name: "", email: "", message: "" });
-  //     }, 4000);
-  //   }
-  // };
 
   return (
     <section
@@ -129,77 +109,65 @@ export const ContactSection: React.FC = () => {
                 [ DIRECT MESSAGE ]
               </h3>
 
-              {messageSent ? (
-                <div className="p-4 font-mono text-xs bg-emerald-500/10 border border-emerald-500/40 text-emerald-500 flex items-center gap-3">
-                  <Check className="w-5 h-5 shrink-0" />
-                  <span>
-                    Thank you! Your message has been sent. I will respond as
-                    soon as possible.
-                  </span>
+              <div className="grid sm:grid-cols-2 gap-4">
+                <div className="space-y-1 font-mono text-xs">
+                  <label className="text-theme-muted uppercase font-bold">
+                    YOUR NAME
+                  </label>
+                  <input
+                    type="text"
+                    required
+                    name="name"
+                    value={formData.name}
+                    onChange={(e) =>
+                      setFormData({ ...formData, name: e.target.value })
+                    }
+                    placeholder="Jane Doe"
+                    className="w-full px-3.5 py-2 rounded-none bg-theme-page border border-theme text-theme-primary focus:outline-none focus:border-theme-accent"
+                  />
                 </div>
-              ) : (
-                <>
-                  <div className="grid sm:grid-cols-2 gap-4">
-                    <div className="space-y-1 font-mono text-xs">
-                      <label className="text-theme-muted uppercase font-bold">
-                        YOUR NAME
-                      </label>
-                      <input
-                        type="text"
-                        required
-                        name="name"
-                        value={formData.name}
-                        onChange={(e) =>
-                          setFormData({ ...formData, name: e.target.value })
-                        }
-                        placeholder="Jane Doe"
-                        className="w-full px-3.5 py-2 rounded-none bg-theme-page border border-theme text-theme-primary focus:outline-none focus:border-theme-accent"
-                      />
-                    </div>
-                    <div className="space-y-1 font-mono text-xs">
-                      <label className="text-theme-muted uppercase font-bold">
-                        YOUR EMAIL
-                      </label>
-                      <input
-                        type="email"
-                        required
-                        name="email"
-                        value={formData.email}
-                        onChange={(e) =>
-                          setFormData({ ...formData, email: e.target.value })
-                        }
-                        placeholder="jane@example.com"
-                        className="w-full px-3.5 py-2 rounded-none bg-theme-page border border-theme text-theme-primary focus:outline-none focus:border-theme-accent"
-                      />
-                    </div>
-                  </div>
+                <div className="space-y-1 font-mono text-xs">
+                  <label className="text-theme-muted uppercase font-bold">
+                    YOUR EMAIL
+                  </label>
+                  <input
+                    type="email"
+                    required
+                    name="email"
+                    value={formData.email}
+                    onChange={(e) =>
+                      setFormData({ ...formData, email: e.target.value })
+                    }
+                    placeholder="jane@example.com"
+                    className="w-full px-3.5 py-2 rounded-none bg-theme-page border border-theme text-theme-primary focus:outline-none focus:border-theme-accent"
+                  />
+                </div>
+              </div>
 
-                  <div className="space-y-1 font-mono text-xs">
-                    <label className="text-theme-muted uppercase font-bold">
-                      MESSAGE
-                    </label>
-                    <textarea
-                      rows={4}
-                      required
-                      name="message"
-                      value={formData.message}
-                      onChange={(e) =>
-                        setFormData({ ...formData, message: e.target.value })
-                      }
-                      placeholder="Hi Joel, I'd like to discuss a senior frontend opportunity..."
-                      className="w-full px-3.5 py-2 rounded-none bg-theme-page border border-theme text-theme-primary focus:outline-none focus:border-theme-accent"
-                    />
-                  </div>
+              <div className="space-y-1 font-mono text-xs">
+                <label className="text-theme-muted uppercase font-bold">
+                  MESSAGE
+                </label>
+                <textarea
+                  rows={4}
+                  required
+                  name="message"
+                  value={formData.message}
+                  onChange={(e) =>
+                    setFormData({ ...formData, message: e.target.value })
+                  }
+                  placeholder="Hi Joel, I'd like to discuss a senior frontend opportunity..."
+                  className="w-full px-3.5 py-2 rounded-none bg-theme-page border border-theme text-theme-primary focus:outline-none focus:border-theme-accent"
+                />
+              </div>
 
-                  <button
-                    type="submit"
-                    className="w-full flex items-center justify-center gap-2 py-3 font-mono text-xs font-bold uppercase tracking-wider rounded-none text-white bg-theme-accent hover:bg-theme-accent-hover transition-colors shadow-md"
-                  >
-                    <Send className="w-4 h-4" />
-                    <span>[ SEND MESSAGE ]</span>
-                  </button>
-                </>
-              )}
+              <button
+                type="submit"
+                className="w-full flex items-center justify-center gap-2 py-3 font-mono text-xs font-bold uppercase tracking-wider rounded-none text-white bg-theme-accent hover:bg-theme-accent-hover transition-colors shadow-md"
+              >
+                <Send className="w-4 h-4" />
+                <span>[ SEND MESSAGE ]</span>
+              </button>
             </form>
           </div>
         </div>
